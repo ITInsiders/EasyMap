@@ -174,10 +174,16 @@
     <Compile Include="App_Start\FilterConfig.cs" />
     <Compile Include="App_Start\RouteConfig.cs" />
     <Compile Include="App_Start\SignalR.cs" />
+    <Compile Include="Controllers\Helper.cs" />
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\Configuration.cs" />
+    <Compile Include="Models\Context.cs" />
+    <Compile Include="Models\User.cs" />
+    <Compile Include="Models\UserData.cs" />
+    <Compile Include="Models\UserVerify.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
@@ -267,7 +273,6 @@
     <Folder Include="App_Data\" />
     <Folder Include="Fonts\" />
     <Folder Include="Hubs\" />
-    <Folder Include="Models\" />
     <Folder Include="Resources\Images\" />
     <Folder Include="Resources\Logs\" />
   </ItemGroup>
