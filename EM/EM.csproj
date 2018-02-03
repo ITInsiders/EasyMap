@@ -181,6 +181,7 @@
     </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\Context.cs" />
+    <Compile Include="Models\Places.cs" />
     <Compile Include="Models\User.cs" />
     <Compile Include="Models\UserData.cs" />
     <Compile Include="Models\UserVerify.cs" />
