@@ -1,0 +1,94 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ClassDiagram MajorVersion="1" MinorVersion="1">
+  <Class Name="EasyMap.DAL.Entities.Place" Collapsed="true">
+    <Position X="6.75" Y="1" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AQADAAAAAEAggAAAAAAIAAQAAAAEAEACEACAIAAAAAE=</HashCode>
+      <FileName>Entities\Place.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="EasyMap.DAL.Entities.PlacePhoto" Collapsed="true">
+    <Position X="6.75" Y="3.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAACAAAAAAAAAAAAAAAAAAAAgAAAAAAAAEAAAAAABAA=</HashCode>
+      <FileName>Entities\PlacePhoto.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="EasyMap.DAL.Entities.UserVerification" Collapsed="true">
+    <Position X="2.75" Y="2.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAADAAAAACAAAAAAAAAAQAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Entities\UserVerification.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="EasyMap.DAL.Entities.Review" Collapsed="true">
+    <Position X="2.75" Y="1" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAADAAAEAAAAAAAAAAIAAAgAAAAAAAAAAEAAgAAABAA=</HashCode>
+      <FileName>Entities\Review.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="EasyMap.DAL.Entities.User" Collapsed="true">
+    <Position X="0.5" Y="1.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAACAEAAACAAAEAAAAAQQAgAAAAQAAEKAECQAwAABAg=</HashCode>
+      <FileName>Entities\User.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="EasyMap.DAL.Entities.UserRegistration" Collapsed="true">
+    <Position X="0.5" Y="2.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAgAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Entities\User.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="EasyMap.DAL.Entities.UserPhoto" Collapsed="true">
+    <Position X="4.75" Y="1" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAADAAAAAAAAAAAAAAAAAAgCgAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Entities\UserPhoto.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="EasyMap.DAL.EF.Context" Collapsed="true">
+    <Position X="2.75" Y="3.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAGAAAAAAAQAAAgAAAAAAAAAAAAAAAEAAAAAgAAA=</HashCode>
+      <FileName>EF\Context.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="EasyMap.DAL.Repositories.Repository&lt;T&gt;" Collapsed="true">
+    <Position X="9.5" Y="1" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAQAAAAAAAAQAABAAAAAAAAAAAEIAEAAAgAAAAAAAAA=</HashCode>
+      <FileName>Repositories\Repository.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" />
+  </Class>
+  <Class Name="EasyMap.DAL.Repositories.EFUnitOfWork" Collapsed="true">
+    <Position X="9.5" Y="2.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAIEAOAAACIQAQAAAgAABAAAAAAAAAAAAFAAAIAgAAA=</HashCode>
+      <FileName>Repositories\EFUnitOfWork.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" />
+  </Class>
+  <Class Name="System.Object" Collapsed="true">
+    <Position X="11.5" Y="1.75" Width="1.5" />
+    <TypeIdentifier />
+  </Class>
+  <Interface Name="EasyMap.DAL.Interfaces.IUnitOfWork" Collapsed="true">
+    <Position X="4.5" Y="3.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAOAAAAAAAQAAAgAAAAAAAAAAAAAAAEAAAAAgAAA=</HashCode>
+      <FileName>Interfaces\IUnitOfWork.cs</FileName>
+    </TypeIdentifier>
+  </Interface>
+  <Interface Name="EasyMap.DAL.Interfaces.IRepository&lt;T&gt;" Collapsed="true">
+    <Position X="6.75" Y="2.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAQAAAAAAAAAAABAAAAAAAAAAAEIAEAAAgAAAAAAAAA=</HashCode>
+      <FileName>Interfaces\IRepository.cs</FileName>
+    </TypeIdentifier>
+  </Interface>
+  <Font Name="Segoe UI" Size="9" />
+</ClassDiagram>

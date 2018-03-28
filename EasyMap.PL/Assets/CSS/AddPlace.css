@@ -1,0 +1,226 @@
+﻿.well {
+    padding: 35px;
+    padding-left: 30px;
+    box-shadow: 0 0 10px #666666;
+    margin: 4% auto 0;
+    width: 450px;
+}
+
+body {
+    background-color: #dedede;
+}
+.form-group {
+    margin-bottom: 0;
+}
+
+.form-group .map {
+    width: 100%;
+    height: 200px;
+    overflow: hidden;
+    display: none;
+}
+
+.form-group .map.active {
+    display: block;
+}
+
+.input-group-addon {
+    background-color: #4EB1BA;
+    color: #fff;
+}
+.btn-warning {
+    background-color: #4EB1BA;
+    color: #fff;
+    border-color: #3b8990;
+}
+
+.text-success {
+    color: #222930;
+}
+.multiselect-container {
+    position: absolute;
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+}
+
+    .multiselect-container .input-group {
+        margin: 5px
+    }
+
+    .multiselect-container > li {
+        padding: 0 0 0 3px;
+    }
+
+        .multiselect-container > li > a.multiselect-all label {
+            font-weight: bold
+        }
+
+        .multiselect-container > li > label.multiselect-group {
+            margin: 0;
+            padding: 3px 20px 3px 10px;
+            height: 100%;
+            font-weight: bold;
+        }
+
+        .multiselect-container > li > a > label {
+            margin: 0;
+            height: 100%;
+            cursor: pointer;
+            font-weight: normal
+        }
+
+            .multiselect-container > li > a > label.radio, .multiselect-container > li > a > label.checkbox {
+                margin: 0
+            }
+
+            .multiselect-container > li > a > label > input[type="checkbox"] {
+                margin-bottom: 5px
+            }
+.dropdown-menu > .active > a, .dropdown-menu > .active > a:focus, .dropdown-menu > .active > a:hover {
+    background-color: #f5f5f5;
+    color: #222930;
+}
+
+.btn-group > .btn-group:nth-child(2) > .multiselect.btn {
+    border-top-left-radius: 4px;
+    border-bottom-left-radius: 4px
+}
+button.btn {
+    transition: .5s;
+    color: #fff !important;
+}
+button.btn:hover, button.btn:active {
+    box-shadow: inset 1px 1px 4px 0 rgba(255,255,255,.5), inset -1px -1px 4px 0 rgba(0,0,0,.5);
+}
+button.btn * {
+    color: #000;
+}
+.row {
+    margin-bottom: 15px;
+}
+
+.btn {
+    position: relative;
+    padding: 10px 16px;
+    font-size: 15px;
+    line-height: 1.33;
+    border-radius: 6px;
+    min-width: 90px;
+    height: 34px;
+    padding-top: 6px;
+    padding-bottom: 6px;
+    outline: none !important;
+    background-color: #4EB1BA;
+    color: #fff;
+}
+.dropdown-menu {
+    min-width:120px;
+}
+.WorkingHour {
+    height:34px;
+    margin-bottom: 15px;
+} 
+.TimeBlock {
+    position: absolute;
+    bottom: 34px;
+    left: 0;
+    min-width: 130px;
+    padding: 5px;
+    height: auto;
+    background-color: #fff;
+    border: 1px solid rgba(0,0,0,.15);
+    border-radius: 4px;
+    z-index: 100;
+}
+    .TimeBlock  input {
+        padding: 2px;
+    }
+
+    .TimeBlock .InputTime {
+        height: auto;
+        width: 100%;
+        font-size: 12px;
+        display: inline-block;
+        float: left;
+    }
+
+    .TimeBlock .CheckDayAndNight {
+        height: 20px;
+        width: 100%;
+        font-size: 12px;
+        display: inline-block;
+        float: left;
+    }
+
+    .TimeBlock .InputTime .time {
+        width: 47.5%;
+        display: inline-block;
+        float: left;
+    }
+    .TimeBlock .InputTime .temp {
+        width: 5%;
+        display: inline-block;
+        float: left;
+    }
+.remove {
+    position: relative;
+    padding: 2px 3px;
+    margin-left: 15px;
+    font-size: 14px;
+    line-height: 1.33;
+    border-radius: 6px;
+    min-width: 20px;
+    height: 34px;
+    padding-top: 6px;
+    padding-bottom: 6px;
+    outline: none !important;
+    border: 1px solid transparent;
+    background-color: #4EB1BA;
+    color: #fff;
+}
+
+.AddPhoto {
+    width: 100%;
+    height: 160px;
+    margin: 5px;
+    background: no-repeat center;
+    background-size: cover;
+    background-image: url('/Resources/images/icon/Camera.png');
+    margin-top: 7px;
+    vertical-align: middle;
+    float: right;
+}
+
+
+.Pictures {
+    width: 100%;
+    height: auto;
+}
+.Pictures .Picture {
+    width: calc(50% - 4px);
+    max-height: 100px;
+    margin-top: 4px;
+    margin-right: 4px;
+    display: inline-block;
+    float: left;
+}
+.Pictures .Picture:nth-child(2n) {
+    margin-right: 0;
+}
+
+@media (max-width: 450px) {
+    .well, .btn-group, .btn {
+            width: 100% !important;
+        }
+        .btn-group, .btn, .dropdown-menu {
+            font-size: 12px;
+            min-width: 90px;
+        }
+        .btn {
+            padding-left:10px;
+        }
+    .TimeBlock {
+        left: -25px;
+    }
+    }

@@ -1,0 +1,49 @@
+﻿using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Web;
+
+namespace EasyMap.PL.Models
+{
+    public class PageInfo
+    {
+        public string Controller { get; set; }
+        public string View { get; set; }
+        public string Title { get; set; }
+        public string Layout { get; set; }
+
+        private string ControllerHref => Controller + "/" + Controller;
+        private string ViewHref => ControllerHref + View;
+        public string LayoutHref => "~/Views/Shared/" + Layout + ".cshtml";
+
+        public string ControllerStyleHref => "~/Resources/CSS/" + ControllerHref + ".css";
+        public string ControllerScriptHref => "~/Resources/JS/" + ControllerHref + ".js";
+
+        public string ViewStyleHref => "~/Resources/CSS/" + ViewHref + ".css";
+        public string ViewScriptHref => "~/Resources/JS/" + ViewHref + ".js";
+
+        public static PageInfo Create(string Controller = null, string View = null)
+            => new PageInfo() { Controller = Controller, Layout = Controller, View = View, Title = View};
+
+        public PageInfo setController(string Controller)
+        {
+            this.Controller = Controller;
+            return this;
+        }
+        public PageInfo setView(string View)
+        {
+            this.View = View;
+            return this;
+        }
+        public PageInfo setTitle(string Title)
+        {
+            this.Title = Title;
+            return this;
+        }
+        public PageInfo setLayout(string Layout)
+        {
+            this.Layout = Layout;
+            return this;
+        }
+    }
+}
