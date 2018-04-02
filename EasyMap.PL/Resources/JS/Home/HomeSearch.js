@@ -1,7 +1,7 @@
 ﻿var myMap;
 ymaps.ready(init);
 function init() {
-    var myMap = new ymaps.Map('map', {
+    myMap = new ymaps.Map('map', {
         center: [55, 34],
         zoom: 10,
         controls: []
@@ -16,11 +16,12 @@ function Ready() {
 
 function AddPointToMap(object) {
     var objectMap = new ymaps.Placemark(object.position, {
-
-    }, {
-
+        balloonContentHeader: "<div class=\"balloonHeader\">" + object.Name + "</div>",
+        balloonContentBody: "Содержимое <em>балуна</em> метки",
+        balloonContentFooter: object.Address,
+        hintContent: object.Name
     });
-    geoMap.geoObjects.add(objectMap);
+    myMap.geoObjects.add(objectMap);
 }
 
 function SearchLines() {
@@ -70,6 +71,7 @@ function SearchBlocks() {
     
     SearchResult.empty();
     $.each(Data, function (i, v) {
+        v.position = [v.Longitude, v.Latitude];
 
         setTimeout(AddPointToMap(v), 0);
 
@@ -82,8 +84,7 @@ function SearchBlocks() {
         BlockData.find(".Info.Time").text(v.WorkingHour);
         BlockData.find(".Distance").text("");
 
-        var position = [v.Longitude, v.Latitude];
-        BlockData.data("position", JSON.stringify(position));
+        BlockData.data("position", JSON.stringify(v.position));
 
         var mainPhoto = null;
 

@@ -175,3 +175,7 @@
     section .Option .Blocks{ width: 100%; }
     .map { display: none; }
 }
+
+.balloonHeader {
+    display: inline-block;
+}
