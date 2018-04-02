@@ -276,18 +276,12 @@
     </Content>
     <Content Include="Views\Web.config" />
     <Content Include="Views\_ViewStart.cshtml" />
-<<<<<<< HEAD
     <Content Include="Views\Layout\Error.cshtml" />
     <Content Include="Views\Home\Index.cshtml" />
     <Content Include="Views\Layout\Main.cshtml" />
     <Content Include="Views\Home\Search.cshtml" />
     <Content Include="Views\Update\Place.cshtml" />
     <Content Include="Views\Layout\Quest.cshtml" />
-=======
-    <Content Include="Views\Home\Index.cshtml" />
-    <Content Include="Views\Home\Search.cshtml" />
-    <Content Include="Views\Update\Place.cshtml" />
->>>>>>> 585e4479ca0c68a5f10b00e4eacb20f89d47f8ad
     <Content Include="Views\Quest\Create.cshtml" />
     <Content Include="Views\Quest\Game.cshtml" />
     <Content Include="Scripts\umd\popper.min.js.map" />
@@ -300,16 +294,12 @@
     <Content Include="Scripts\popper-utils.min.js.map" />
     <Content Include="Scripts\popper-utils.js.map" />
     <Content Include="Views\Home\Identifier.cshtml" />
-<<<<<<< HEAD
-    <Content Include="Views\Layout\Home.cshtml" />
-=======
     <Content Include="Views\Layout\Error.cshtml" />
     <Content Include="Views\Layout\Home.cshtml" />
     <Content Include="Views\Layout\Main.cshtml" />
     <Content Include="Views\Layout\Quest.cshtml" />
     <Content Include="Views\Account\Account.cshtml" />
     <Content Include="Views\Layout\Account.cshtml" />
->>>>>>> 585e4479ca0c68a5f10b00e4eacb20f89d47f8ad
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
