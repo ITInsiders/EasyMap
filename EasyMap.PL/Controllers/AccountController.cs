@@ -32,7 +32,9 @@ namespace EasyMap.PL.Controllers
         [HttpPost]
         public ActionResult Registration(UserRegistration Model)
         {
-            UserServices.Create(Model);
+            Model.DateOfRegistration = DateTime.Now;
+            Model.Access = 0;
+            UserServices.Create((UserDTO) Model);
             if (Identity.Authentication(Model.Login, Model.Password)) return Redirect("/Home");
 
             return View();

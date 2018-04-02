@@ -16,11 +16,11 @@ namespace EasyMap.BL.DTO
         public string MiddleName { get; set; }
         public string Email { get; set; }
         public string PhoneNumber { get; set; }
-        public DateTime DateOfBirth { get; set; }
+        public DateTime? DateOfBirth { get; set; }
         public DateTime DateOfRegistration { get; set; }
-        public DateTime DateOfLastVisit { get; set; }
-        public DateTime DateOfLastChange { get; set; }
-        public double Rating { get; set; }
+        public DateTime? DateOfLastVisit { get; set; }
+        public DateTime? DateOfLastChange { get; set; }
+        public double? Rating { get; set; }
         public int Access { get; set; } // доступы: 0 - простой пользоваель, 1 - администратор
 
     }

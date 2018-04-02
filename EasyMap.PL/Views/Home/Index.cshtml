@@ -1,8 +1,9 @@
 ﻿@{
     Layout = ViewBag.Page.LayoutHref;
     ViewBag.Page.Title = "Easy Map";
+    Identity Identity = new Identity();
 }
-
+@Identity.isAuthentication
 <div class="Option">
     <a class="block" href="/Home/Search/Достопримечательности">
         <div class="image" style="background-image: url(/Resources/images/icon/Tower.svg)"></div>
