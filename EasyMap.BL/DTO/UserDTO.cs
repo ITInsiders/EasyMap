@@ -24,4 +24,8 @@ namespace EasyMap.BL.DTO
         public int Access { get; set; } // доступы: 0 - простой пользоваель, 1 - администратор
 
     }
+    public class UserRegistration : UserDTO
+    {
+        public string RePassword { get; set; }
+    }
 }

@@ -32,8 +32,5 @@ namespace EasyMap.DAL.Entities
 
     }
 
-    public class UserRegistration : User
-    {
-        public string RePassword { get; set; }
-    }
+   
 }
