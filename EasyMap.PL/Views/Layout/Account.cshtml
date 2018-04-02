@@ -1,0 +1,26 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>@ViewBag.Page.Title</title>
+    @Styles.Render("~/bundles/SystemStyles")
+    @RenderSection("Styles", required: false)
+    @Styles.Render(ViewBag.Page.ControllerStyleHref)
+    @Styles.Render(ViewBag.Page.ViewStyleHref)
+</head>
+<body>
+    <header class="header">
+        <a class="Logo" href="/Home/Index"></a>
+        <a class="Title" href="/Home/Index">EasyMap</a>
+        <a class="User" style="background-image: url(/Resources/images/icon/login.svg)" href="/Home/Entry"></a>
+    </header>
+    <section>@RenderBody()</section>
+    <footer class="footer"></footer>
+    @Scripts.Render("~/bundles/SystemScripts")
+    <script src="https://api-maps.yandex.ru/2.1/?lang=ru_RU" type="text/javascript"></script>
+    @RenderSection("Scripts", required: false)
+    @Scripts.Render(ViewBag.Page.ControllerScriptHref)
+    @Scripts.Render(ViewBag.Page.ViewScriptHref)
+</body>
+</html>

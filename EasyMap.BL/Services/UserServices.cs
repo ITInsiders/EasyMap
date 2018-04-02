@@ -7,7 +7,7 @@ using System.Linq;
 
 namespace EasyMap.BL.Services
 {
-    class UserServices
+    public class UserServices
     {
         private static EFUnitOfWork Database = new EFUnitOfWork();
 
