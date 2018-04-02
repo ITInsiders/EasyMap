@@ -14,7 +14,7 @@ namespace EasyMap.PL.Models
 
         private string ControllerHref => Controller + "/" + Controller;
         private string ViewHref => ControllerHref + View;
-        public string LayoutHref => "~/Views/Shared/" + Layout + ".cshtml";
+        public string LayoutHref => "~/Views/Layout/" + Layout + ".cshtml";
 
         public string ControllerStyleHref => "~/Resources/CSS/" + ControllerHref + ".css";
         public string ControllerScriptHref => "~/Resources/JS/" + ControllerHref + ".js";
