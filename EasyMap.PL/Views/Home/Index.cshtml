@@ -1,66 +1,56 @@
 ﻿@{
-    ViewBag.Title = "Easy Map";
-}
-@section Styles
-{
-    @Styles.Render("~/CSS/Index")
-}
-@section Scripts
-{
-    @Scripts.Render("~/JS/Index")
-}
-@section Body
-{
-    <div class="Option">
-        <a class="block" href="/Home/Search/Достопримечательности">
-            <div class="image" style="background-image: url(/Resources/images/icon/Tower.svg)"></div>
-            <div class="title">Достопримечательности</div>
-        </a>
-        <a class="block" href="/Home/Search/Кино">
-            <div class="image" style="background-image: url(/Resources/images/icon/Сinema.svg)"></div>
-            <div class="title">Кино</div>
-        </a>
-        <a class="block" href="/Home/Search/Торговые центры">
-            <div class="image" style="background-image: url(/Resources/images/icon/Shop.svg)"></div>
-            <div class="title">Торговые центры</div>
-        </a>
-        <a class="block" href="/Home/Search/Гостиницы">
-            <div class="image" style="background-image: url(/Resources/images/icon/hotel.svg)"></div>
-            <div class="title">Гостиницы</div>
-        </a>
-        <a class="block" href="/Home/Search/Кафе">
-            <div class="image" style="background-image: url(/Resources/images/icon/food.svg)"></div>
-            <div class="title">Кафе</div>
-        </a>
-        <a class="block" href="/Home/Search/Парки">
-            <div class="image" style="background-image: url(/Resources/images/icon/Park.svg)"></div>
-            <div class="title">Парки</div>
-        </a>
-        <a class="block" href="/Home/Search/Больницы">
-            <div class="image" style="background-image: url(/Resources/images/icon/hospital.svg)"></div>
-            <div class="title">Больницы</div>
-        </a>
-        <a class="block" href="/Home/Search/Пляжи">
-            <div class="image" style="background-image: url(/Resources/images/icon/travel.svg)"></div>
-            <div class="title">Пляжи</div>
-        </a>
-        <a class="block" href="/Home/Search/Бары">
-            <div class="image" style="background-image: url(/Resources/images/icon/bar.svg)"></div>
-            <div class="title">Бары</div>
-        </a>
-        <div class="Function">
-            <div class="Image Location" id="Location" style="background-image:url(/Resources/Images/icon/location.svg)"></div>
-            <a class="Image All" href="/Home/Search/Все" style="background-image:url(/Resources/Images/icon/star.svg)">
-                <div class="InfoForAll" id="InfoForAll">Найти любое интересное</div>
-            </a>
-            <a class="Image Search" style="background-image:url(/Resources/Images/icon/Search1.svg)" href="/Home/Search/"></a>
-        </div>
-    </div>
-    <div class="map" id="map">
-    </div>
-
-    <div class="Message">
-
-    </div>
+    Layout = ViewBag.Page.LayoutHref;
+    ViewBag.Page.Title = "Easy Map";
 }
 
+<div class="Option">
+    <a class="block" href="/Home/Search/Достопримечательности">
+        <div class="image" style="background-image: url(/Resources/images/icon/Tower.svg)"></div>
+        <div class="title">Достопримечательности</div>
+    </a>
+    <a class="block" href="/Home/Search/Кино">
+        <div class="image" style="background-image: url(/Resources/images/icon/Сinema.svg)"></div>
+        <div class="title">Кино</div>
+    </a>
+    <a class="block" href="/Home/Search/Торговые центры">
+        <div class="image" style="background-image: url(/Resources/images/icon/Shop.svg)"></div>
+        <div class="title">Торговые центры</div>
+    </a>
+    <a class="block" href="/Home/Search/Гостиницы">
+        <div class="image" style="background-image: url(/Resources/images/icon/hotel.svg)"></div>
+        <div class="title">Гостиницы</div>
+    </a>
+    <a class="block" href="/Home/Search/Кафе">
+        <div class="image" style="background-image: url(/Resources/images/icon/food.svg)"></div>
+        <div class="title">Кафе</div>
+    </a>
+    <a class="block" href="/Home/Search/Парки">
+        <div class="image" style="background-image: url(/Resources/images/icon/Park.svg)"></div>
+        <div class="title">Парки</div>
+    </a>
+    <a class="block" href="/Home/Search/Больницы">
+        <div class="image" style="background-image: url(/Resources/images/icon/hospital.svg)"></div>
+        <div class="title">Больницы</div>
+    </a>
+    <a class="block" href="/Home/Search/Пляжи">
+        <div class="image" style="background-image: url(/Resources/images/icon/travel.svg)"></div>
+        <div class="title">Пляжи</div>
+    </a>
+    <a class="block" href="/Home/Search/Бары">
+        <div class="image" style="background-image: url(/Resources/images/icon/bar.svg)"></div>
+        <div class="title">Бары</div>
+    </a>
+    <div class="Function">
+        <div class="Image Location" id="Location" style="background-image:url(/Resources/Images/icon/location.svg)"></div>
+        <a class="Image All" href="/Home/Search/Все" style="background-image:url(/Resources/Images/icon/star.svg)">
+            <div class="InfoForAll" id="InfoForAll">Найти любое интересное</div>
+        </a>
+        <a class="Image Search" style="background-image:url(/Resources/Images/icon/Search1.svg)" href="/Home/Search/"></a>
+    </div>
+</div>
+<div class="map" id="map">
+</div>
+
+<div class="Message">
+
+</div>

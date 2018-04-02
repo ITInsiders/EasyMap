@@ -15,12 +15,10 @@ namespace EM
             bundles.Add(new ScriptBundle("~/bundles/SystemScripts").Include(
                 "~/Scripts/modernizr-{version}.js",
                 "~/Scripts/respond*",
-                "~/Scripts/jquery*",
+                "~/Scripts/jquery-*",
                 "~/Scripts/popper*",
                 "~/Scripts/bootstrap*"
                 ));
-
-
 
             bundles.Add(new ScriptBundle("~/bundles/signalr").Include(
                         "~/Scripts/jquery.signalR-2.2.2.min.js"));

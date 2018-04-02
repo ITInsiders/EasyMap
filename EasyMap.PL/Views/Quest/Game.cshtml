@@ -1,3 +1,14 @@
 ﻿@{
     Layout = ViewBag.Page.LayoutHref;
 }
+@section Styles
+{
+}
+@section Scripts
+{
+    <script src="https://api-maps.yandex.ru/2.1/?lang=ru_RU" type="text/javascript"></script>
+    @Scripts.Render("~/signalr/hubs")
+}
+<div class="Map" id="Map">
+
+</div>
