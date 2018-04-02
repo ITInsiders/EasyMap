@@ -4,16 +4,15 @@ namespace EasyMap.DAL.Migrations
     using System.Data.Entity;
     using System.Data.Entity.Migrations;
     using System.Linq;
-    using EF;
 
-    internal sealed class Configuration : DbMigrationsConfiguration<Context>
+    internal sealed class Configuration : DbMigrationsConfiguration<EasyMap.DAL.EF.Context>
     {
         public Configuration()
         {
             AutomaticMigrationsEnabled = true;
         }
 
-        protected override void Seed(Context context)
+        protected override void Seed(EasyMap.DAL.EF.Context context)
         {
             //  This method will be called after migrating to the latest version.
 

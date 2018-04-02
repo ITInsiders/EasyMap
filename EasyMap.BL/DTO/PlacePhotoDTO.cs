@@ -11,5 +11,6 @@ namespace EasyMap.BL.DTO
         public int Id { get; set; }
         public int PlaceId { get; set; }
         public string SRC { get; set; }
+        public bool Main { get; set; }
     }
 }

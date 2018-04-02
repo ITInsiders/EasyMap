@@ -4,6 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.ComponentModel.DataAnnotations;
+using EasyMap.BL.Services;
 
 namespace EasyMap.BL.DTO
 {
@@ -22,5 +23,6 @@ namespace EasyMap.BL.DTO
         public int? Creater { get; set; } // создатель
         public DateTime DateCreate { get; set; } // дата создания
 
+        public List<PlacePhotoDTO> photos => PlacePhotoServices.GetAll().Where(x => x.PlaceId == Id).ToList();
     }
 }

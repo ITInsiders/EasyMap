@@ -12,9 +12,15 @@ $(document).ready(Ready);
 
 function Ready() {
     $("#Search").keyup(SearchLines).click(SearchLines);
-    $("#SearchList").bind("click focus change", function () {
-        alert("User clicked on");
-    });;
+}
+
+function AddPointToMap(object) {
+    var objectMap = new ymaps.Placemark(object.position, {
+
+    }, {
+
+    });
+    geoMap.geoObjects.add(objectMap);
 }
 
 function SearchLines() {
@@ -64,13 +70,28 @@ function SearchBlocks() {
     
     SearchResult.empty();
     $.each(Data, function (i, v) {
-        var BlockClone = Block.clone();
 
-        BlockClone.find(".Name").text(v.Name);
-        BlockClone.find(".Info.Category").text(v.Tags);
-        BlockClone.find(".Info.Adress").text(v.Address);
-        BlockClone.find(".Info.Time").text(v.WorkingHour);
-        BlockClone.find(".Distance").text("");
+        setTimeout(AddPointToMap(v), 0);
+
+        var BlockClone = Block.clone(),
+            BlockData = BlockClone.find(".Data");
+
+        BlockData.find(".Name").text(v.Name);
+        BlockData.find(".Info.Category").text(v.Tags);
+        BlockData.find(".Info.Adress").text(v.Address);
+        BlockData.find(".Info.Time").text(v.WorkingHour);
+        BlockData.find(".Distance").text("");
+
+        var position = [v.Longitude, v.Latitude];
+        BlockData.data("position", JSON.stringify(position));
+
+        var mainPhoto = null;
+
+        $.each(v.photos, function (index, element) {
+            if (element.Main) mainPhoto = element.SRC;
+        });
+
+        BlockClone.find(".Photo").css("background-image", "url(\"" + mainPhoto + "\")");
 
         SearchResult.append(BlockClone);
     });

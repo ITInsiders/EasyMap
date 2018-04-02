@@ -7,13 +7,13 @@ namespace EasyMap.DAL.Migrations
     using System.Resources;
     
     [GeneratedCode("EntityFramework.Migrations", "6.2.0-61023")]
-    public sealed partial class EasyMap : IMigrationMetadata
+    public sealed partial class M : IMigrationMetadata
     {
-        private readonly ResourceManager Resources = new ResourceManager(typeof(EasyMap));
+        private readonly ResourceManager Resources = new ResourceManager(typeof(M));
         
         string IMigrationMetadata.Id
         {
-            get { return "201802132300142_EasyMap"; }
+            get { return "201804021338219_M"; }
         }
         
         string IMigrationMetadata.Source
