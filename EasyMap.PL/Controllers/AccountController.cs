@@ -25,8 +25,7 @@ namespace EasyMap.PL.Controllers
         {
             if (Identity.Authentication(Model.Login, Model.Password)) return Redirect("/Home");
             else ModelState.AddModelError("Password", "Пароль не верный");
-
-            return View();
+            return Redirect("/Account/Account");
         }
 
         [HttpPost]

@@ -1,8 +1,8 @@
 ﻿using Microsoft.Owin;
 using Owin;
 
-[assembly: OwinStartup(typeof(EM.SignalR))]
-namespace EM
+[assembly: OwinStartup(typeof(EasyMap.SignalR))]
+namespace EasyMap
 {
     public class SignalR
     {
