@@ -1,4 +1,6 @@
-﻿var myMap;
+﻿var myMap = null,
+    Clusterer = null;
+
 ymaps.ready(init);
 function init() {
     myMap = new ymaps.Map('map', {
@@ -6,6 +8,12 @@ function init() {
         zoom: 10,
         controls: []
     });
+
+    Clusterer = new ymaps.Clusterer({
+        clusterDisableClickZoom: true,
+    });
+
+    myMap.geoObjects.add(Clusterer);
 }
 
 $(document).ready(Ready);
@@ -17,11 +25,12 @@ function Ready() {
 function AddPointToMap(object) {
     var objectMap = new ymaps.Placemark(object.position, {
         balloonContentHeader: "<div class=\"balloonHeader\">" + object.Name + "</div>",
-        balloonContentBody: "Содержимое <em>балуна</em> метки",
-        balloonContentFooter: object.Address,
-        hintContent: object.Name
+        balloonContentBody: "<div class=\"balloonBody\">" + object.Address + "</div>",
+        balloonContentFooter: object.Tags,
+        hintContent: object.Name,
+        iconCaption: object.Name
     });
-    myMap.geoObjects.add(objectMap);
+    Clusterer.add(objectMap);
 }
 
 function SearchLines() {
@@ -70,6 +79,7 @@ function SearchBlocks() {
     });
     
     SearchResult.empty();
+    Clusterer.removeAll();
     $.each(Data, function (i, v) {
         v.position = [v.Longitude, v.Latitude];
 
@@ -95,5 +105,8 @@ function SearchBlocks() {
         BlockClone.find(".Photo").css("background-image", "url(\"" + mainPhoto + "\")");
 
         SearchResult.append(BlockClone);
+    });
+    myMap.setBounds(Clusterer.getBounds(), {
+        checkZoomRange: true
     });
 }
