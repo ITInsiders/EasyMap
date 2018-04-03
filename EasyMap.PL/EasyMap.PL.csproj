@@ -276,9 +276,12 @@
     </Content>
     <Content Include="Views\Web.config" />
     <Content Include="Views\_ViewStart.cshtml" />
+    <Content Include="Views\Layout\Error.cshtml" />
     <Content Include="Views\Home\Index.cshtml" />
+    <Content Include="Views\Layout\Main.cshtml" />
     <Content Include="Views\Home\Search.cshtml" />
     <Content Include="Views\Update\Place.cshtml" />
+    <Content Include="Views\Layout\Quest.cshtml" />
     <Content Include="Views\Quest\Create.cshtml" />
     <Content Include="Views\Quest\Game.cshtml" />
     <Content Include="Scripts\umd\popper.min.js.map" />

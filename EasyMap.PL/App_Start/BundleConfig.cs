@@ -15,7 +15,7 @@ namespace EM
             bundles.Add(new ScriptBundle("~/bundles/SystemScripts").Include(
                 "~/Scripts/modernizr-{version}.js",
                 "~/Scripts/respond*",
-                "~/Scripts/jquery-*",
+                "~/Scripts/jquery-3.3.1.min.js",
                 "~/Scripts/popper*",
                 "~/Scripts/bootstrap*"
                 ));

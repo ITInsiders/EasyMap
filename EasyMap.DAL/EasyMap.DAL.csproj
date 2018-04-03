@@ -57,17 +57,17 @@
     <Compile Include="Entities\UserVerification.cs" />
     <Compile Include="Interfaces\IRepository.cs" />
     <Compile Include="Interfaces\IUnitOfWork.cs" />
-    <Compile Include="Migrations\201802132300142_EasyMap.cs" />
-    <Compile Include="Migrations\201802132300142_EasyMap.Designer.cs">
-      <DependentUpon>201802132300142_EasyMap.cs</DependentUpon>
+    <Compile Include="Migrations\201804021338219_M.cs" />
+    <Compile Include="Migrations\201804021338219_M.Designer.cs">
+      <DependentUpon>201804021338219_M.cs</DependentUpon>
     </Compile>
-    <Compile Include="Migrations\201802271901314_EasyMap1.cs" />
-    <Compile Include="Migrations\201802271901314_EasyMap1.Designer.cs">
-      <DependentUpon>201802271901314_EasyMap1.cs</DependentUpon>
+    <Compile Include="Migrations\201804021347166_M1.cs" />
+    <Compile Include="Migrations\201804021347166_M1.Designer.cs">
+      <DependentUpon>201804021347166_M1.cs</DependentUpon>
     </Compile>
-    <Compile Include="Migrations\201802271921492_EasyMap2.cs" />
-    <Compile Include="Migrations\201802271921492_EasyMap2.Designer.cs">
-      <DependentUpon>201802271921492_EasyMap2.cs</DependentUpon>
+    <Compile Include="Migrations\201804022316498_M2.cs" />
+    <Compile Include="Migrations\201804022316498_M2.Designer.cs">
+      <DependentUpon>201804022316498_M2.cs</DependentUpon>
     </Compile>
     <Compile Include="Migrations\201804021539069_M.cs" />
     <Compile Include="Migrations\201804021539069_M.Designer.cs">
@@ -87,6 +87,7 @@
     <Compile Include="Repositories\Repository.cs" />
   </ItemGroup>
   <ItemGroup>
+<<<<<<< HEAD
     <EmbeddedResource Include="Migrations\201802132300142_EasyMap.resx">
       <DependentUpon>201802132300142_EasyMap.cs</DependentUpon>
     </EmbeddedResource>
@@ -107,10 +108,23 @@
     </EmbeddedResource>
   </ItemGroup>
   <ItemGroup>
+=======
+>>>>>>> f135f54a5b41aeb87fac3f20484c2448eb620f0b
     <None Include="App.config" />
     <None Include="ClassDiagram1.cd" />
     <None Include="DALDiagram.cd" />
     <None Include="packages.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Migrations\201804021338219_M.resx">
+      <DependentUpon>201804021338219_M.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201804021347166_M1.resx">
+      <DependentUpon>201804021347166_M1.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201804022316498_M2.resx">
+      <DependentUpon>201804022316498_M2.cs</DependentUpon>
+    </EmbeddedResource>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
