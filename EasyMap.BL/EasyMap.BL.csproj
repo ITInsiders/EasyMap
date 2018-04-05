@@ -51,6 +51,7 @@
     <Compile Include="DTO\UserDTO.cs" />
     <Compile Include="DTO\UserPhotoDTO.cs" />
     <Compile Include="DTO\UserVerificationDTO.cs" />
+    <Compile Include="Extensions\CryptMD5.cs" />
     <Compile Include="Extensions\MapperTranform.cs" />
     <Compile Include="Infrastructure\ValidationExeption.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
