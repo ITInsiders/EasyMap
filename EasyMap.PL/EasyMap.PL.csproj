@@ -208,6 +208,7 @@
     </Content>
     <Content Include="Resources\CSS\Account\Account.css" />
     <Content Include="Resources\CSS\Account\AccountAccount.css" />
+    <Content Include="Resources\CSS\Home\HomeHome.css" />
     <Content Include="Resources\CSS\Home\HomeIndex.css" />
     <Content Include="Resources\CSS\Home\Home.css" />
     <Content Include="Resources\CSS\Home\HomeSearch.css" />
@@ -217,6 +218,7 @@
     <Content Include="Resources\CSS\System\Fonts.css" />
     <Content Include="Resources\JS\Account\Account.js" />
     <Content Include="Resources\JS\Account\AccountAccount.js" />
+    <Content Include="Resources\JS\Home\HomeHome.js" />
     <Content Include="Resources\JS\Home\HomeIndex.js" />
     <Content Include="Resources\JS\Home\Home.js" />
     <Content Include="Resources\JS\Home\HomeSearch.js" />
@@ -303,6 +305,7 @@
     <Content Include="Views\Layout\Quest.cshtml" />
     <Content Include="Views\Account\Account.cshtml" />
     <Content Include="Views\Layout\Account.cshtml" />
+    <Content Include="Views\Home\Home.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
