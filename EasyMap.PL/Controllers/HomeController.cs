@@ -28,5 +28,10 @@ namespace EasyMap.PL.Controllers
             ViewBag.Page = pageInfo.setView("Identifier");
             return View();
         }
+        public ActionResult Home()
+        {
+            ViewBag.Page = pageInfo.setView("Home");
+            return View();
+        }
     }
 }
