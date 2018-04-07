@@ -1,4 +1,7 @@
-﻿<!DOCTYPE html>
+﻿@{
+    Identity Identity = new Identity();
+}
+<!DOCTYPE html>
 <html>
 <head>
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
@@ -7,12 +10,32 @@
     <title>@ViewBag.Title – приложение ASP.NET</title>
     @Styles.Render("~/DefaultStyles")
     @RenderSection("Styles", required: false)
+
 </head>
 <body>
     <header class="header">
         <a class="Logo" href="/Home/Index"></a>
         <a class="Title" href="/Home/Index">EasyMap</a>
-        <a class="User" style="background-image: url(/Resources/images/icon/login.svg)" href="/Home/Entry"></a>
+        @{
+            if (Identity.isAuthentication)
+            {
+                <div class="User" onclick="showuser();" style="background-image: url(/Resources/images/icon/entry.svg)">
+                    <div class="user">
+                        <div class="user_block">
+                            <div class="name">@Identity.user.Login</div>
+                        </div>
+                        <div class="menu">
+                            <a class="map" href="/Update/Place">Добавить место</a>
+                            <a class="exit" href="/Account/Exit">Выход</a>
+                        </div>
+                    </div>
+                </div>
+            }
+            else
+            {
+                <a class="User" style="background-image: url(/Resources/images/icon/login.svg)" href="/Account/Account"></a>
+            }
+        }
     </header>
     <section>
         @RenderSection("Body", required: true)

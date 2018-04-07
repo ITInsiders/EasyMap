@@ -180,6 +180,7 @@
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
     <Compile Include="Models\PageInfo.cs" />
+    <Compile Include="Models\Profile.cs" />
     <Compile Include="Models\SearchLine.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
@@ -214,6 +215,8 @@
     <Content Include="Resources\CSS\Quest\QuestGame.css" />
     <Content Include="Resources\CSS\Quest\QuestCreate.css" />
     <Content Include="Resources\CSS\System\Fonts.css" />
+    <Content Include="Resources\JS\Account\Account.js" />
+    <Content Include="Resources\JS\Account\AccountAccount.js" />
     <Content Include="Resources\JS\Home\HomeIndex.js" />
     <Content Include="Resources\JS\Home\Home.js" />
     <Content Include="Resources\JS\Home\HomeSearch.js" />

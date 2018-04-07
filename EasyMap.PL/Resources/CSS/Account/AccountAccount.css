@@ -211,3 +211,51 @@ a {
 .foot-lnk {
     text-align: center;
 }
+.validation-message, .validation-message * {
+    transition: none;
+}
+
+.validation-message {
+    position: relative;
+    float: left;
+    display: inline-block;
+    width: 100%;
+    height: 0;
+    overflow: visible;
+    text-align: left;
+}
+
+    .validation-message .field-validation-error {
+        display: inline-block;
+        width: calc(100% - 10px);
+        padding-left: 10px;
+        position: relative;
+        top: -38px;
+        height: 30px;
+        line-height: 30px;
+        font-size: 15px;
+        background: rgba(0,0,0,1);
+        color: rgb(255,255,255);
+        border-radius: 3px;
+        box-shadow: 0 0 1px 1px rgba(255,255,255,.5);
+    }
+
+        .validation-message .field-validation-error span {
+            padding: 0;
+            margin: 0;
+            width: 0;
+            height: 0;
+            overflow: visible;
+        }
+
+        .validation-message .field-validation-error::before {
+            content: "▼";
+            color: rgba(0, 0, 0, 1);
+            height: 5px;
+            overflow: hidden;
+            font-size: 12px;
+            position: relative;
+            top: 18px;
+            text-shadow: 0 1px 1px rgba(255,255,255,.8);
+        }
+

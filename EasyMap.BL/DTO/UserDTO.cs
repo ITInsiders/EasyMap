@@ -3,6 +3,8 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.ComponentModel.DataAnnotations;
+
 
 namespace EasyMap.BL.DTO
 {
@@ -24,7 +26,8 @@ namespace EasyMap.BL.DTO
         public int Access { get; set; } // доступы: 0 - простой пользоваель, 1 - администратор
 
     }
-    public class UserRegistration : UserDTO
+
+    public class UserRegistration: UserDTO
     {
         public string RePassword { get; set; }
     }

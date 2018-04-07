@@ -6,6 +6,7 @@ using System.Web.Mvc;
 using EasyMap.PL.Models;
 using EasyMap.BL.DTO;
 using EasyMap.BL.Services;
+using EasyMap.BL.Extensions;
 
 namespace EasyMap.PL.Controllers
 {
@@ -13,6 +14,7 @@ namespace EasyMap.PL.Controllers
     {
         PageInfo pageInfo = PageInfo.Create("Account");
         Identity Identity = new Identity();
+        CryptMD5 cryptMD5 = new CryptMD5();
 
         public ActionResult Account()
         {
@@ -31,11 +33,21 @@ namespace EasyMap.PL.Controllers
         [HttpPost]
         public ActionResult Registration(UserRegistration Model)
         {
-            Model.DateOfRegistration = DateTime.Now;
-            Model.Access = 0;
-            UserServices.Create((UserDTO) Model);
-            if (Identity.Authentication(Model.Login, Model.Password)) return Redirect("/Home");
-
+            UserDTO user = UserServices.GetAll().FirstOrDefault(x => x.Login == Model.Login);
+            if (user != null) { return Redirect("/Account/Account"); }
+            else
+            {
+                if (Model.Password != Model.RePassword || Model.Password == "" ) return Redirect("/Account/Account");
+                else
+                {
+                    Model.DateOfRegistration = DateTime.Now;
+                    Model.Access = 0;
+                    Model.Login = Model.Login.ToLower();
+                    Model.Password = cryptMD5.GetHash(Model.Password);
+                    UserServices.Create((UserDTO)Model);
+                    if (Identity.Authentication(Model.Login, Model.Password)) return Redirect("/Home");
+                }
+            }
             return View();
         }
 
@@ -48,6 +60,22 @@ namespace EasyMap.PL.Controllers
         public JsonResult Authentication()
         {
             return Json(Identity.isAuthentication, JsonRequestBehavior.AllowGet);
+        }
+
+        [HttpGet]
+        public JsonResult ECheckLogin(string Login)
+        {
+
+            var result = UserServices.GetAll().FirstOrDefault(x => x.Login == Login);
+            return Json(result, JsonRequestBehavior.AllowGet);
+        }
+
+
+        [HttpGet]
+        public JsonResult RCheckLogin(string Login)
+        {
+            var result = UserServices.GetAll().FirstOrDefault(x => x.Login == Login);
+            return Json(result, JsonRequestBehavior.AllowGet);
         }
     }
 }

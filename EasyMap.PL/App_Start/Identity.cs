@@ -4,6 +4,7 @@ using System.Linq;
 using System.Web;
 using EasyMap.BL.DTO;
 using EasyMap.BL.Services;
+using EasyMap.BL.Extensions;
 
 
 namespace EasyMap
@@ -12,6 +13,7 @@ namespace EasyMap
     {
         private HttpContext HC => HttpContext.Current;
         public UserDTO user = null;
+        public CryptMD5 cryptMD5 = new CryptMD5();
 
         public bool Authentication(string Login, string Password)
         {
@@ -23,8 +25,8 @@ namespace EasyMap
                 HttpCookie User = new HttpCookie("User");
                 User.Expires = DateTime.Now.AddYears(1);
 
-                User["Login"] = Login.ToUpper();
-                User["Password"] = Password;
+                User["Login"] = Login.ToLower();
+                User["Password"] =  Password;
 
                 HC.Response.Cookies.Add(User);
             }
@@ -38,7 +40,7 @@ namespace EasyMap
                 if (HC.Request.Cookies["User"] == null) { user = null; return false; }
                 else
                 {
-                    string Login = HC.Request.Cookies["User"]["Login"];
+                    string Login = HC.Request.Cookies["User"]["Login"].ToLower();
                     string Password = HC.Request.Cookies["User"]["Password"];
                     return CheckUserData(Login, Password);
                 }
